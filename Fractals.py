@@ -107,7 +107,7 @@ class Fractal:
                 tally = {'mandelbrot': 0,
                          'divergence': 0}
 
-                # Reflects how many iterations a divergent coordinate hagns on.
+                # Reflects how many iterations a divergent coordinate hangs on.
                 divergence_multipliers = []
 
                 for magnification in range(1, self.MAGNIFICATION+1):
