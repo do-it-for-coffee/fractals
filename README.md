@@ -30,7 +30,7 @@ An image subdirectory is created in the same folder as the script for the images
 ```
 f = Fractal()
 
-resolution = (100, 100)
+resolution = (1280, 1024)
 
 magnification = 17
 
