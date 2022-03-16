@@ -4,7 +4,7 @@ Makes images of fractals like [those in my gallery](https://nate.mrvichin.com/fr
 ![sample](/sample.jpg)
 
 # introduction
-In the past, I had written Python code for Ulam spirals and line diagrams. When I turned to fractals, the Mandelbrot set is mandatory to make for just about any thought about fractals. The vast majority of Mandelbrot set visualizations I found were made with contrasting colors, so naturally, I wanted to make some with a pleasant color palette. For each image, each pixel is divided into subpixels to find how many of the coordinates are a part of the Mandelbrot set or diverge. Those who do diverge still look cool when shown based on how long they could hang on until mathematics forced them to diverge from the Mandelbrot set.
+In the past, I had written Python code for Ulam spirals and line diagrams. When I turned to fractals, the Mandelbrot set is mandatory to make for just about any thought about fractals. The vast majority of Mandelbrot set visualizations I found were made with contrasting colors, so, naturally, I wanted to make some with a pleasant color palette. For each image, each pixel is divided into subpixels to find how many of the coordinates are a part of the Mandelbrot set or diverge. Those who do diverge still look cool when shown based on how long they could hang on until mathematics forced them to diverge from the Mandelbrot set.
 
 # packages
 This requires a few packages.
