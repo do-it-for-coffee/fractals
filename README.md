@@ -25,12 +25,14 @@ _Magnification_ defines how many subpixels a pixel is divided into. I tended tow
 
 _Divergence_ _iterations_ define how many iterations of the Mandelbrot equation a coordinate is put through until the code says whether it diverges or is a part of the Mandelbrot set. This also has a great impact on how much time a render takes. More iterations of course mean more time.
 
+A _magnification_ of 1 and _divergence_ _iterations_ of 20 makes render time fast but less accurate. A _magnification_ of 17 subpixels and _divergence_ _iterations_ of 1600 or 4000 makes for a better image, but the render time takes many hours. A good thing to do is to render a 50×50 or 100×100 pixel image first for a test.
+
 An image subdirectory is created in the same folder as the script for the images. To run the code.
 
 ```
 f = Fractal()
 
-resolution = (1280, 1024)
+resolution = (100, 100)
 
 magnification = 17
 
