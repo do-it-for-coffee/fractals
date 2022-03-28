@@ -39,7 +39,10 @@ class Fractal:
         self.tts = pyttsx3.init()
 
     def mandelbrot(self, image_size, colors, center=None, top=1.6,
-                   magnification=1, divergence_iterations=1600):
+                   magnification=1, divergence_iterations=1600, speak=True):
+
+        # Speech toggle.
+        self.SPEAK = speak
 
         # Since the resolution of the image is divided by two, an even number is
         # required.
@@ -89,10 +92,13 @@ class Fractal:
         print(self.P_STRING.format(cr=self.CENTER[0],
                                    ci=self.CENTER[1],
                                    p=p_complete))
-        self.tts.say(self.P_STRING.format(cr=self.CENTER[0],
-                                          ci=self.CENTER[1],
-                                          p=p_complete))
-        self.tts.runAndWait()
+
+        if self.SPEAK:
+
+            self.tts.say(self.P_STRING.format(cr=self.CENTER[0],
+                                              ci=self.CENTER[1],
+                                              p=p_complete))
+            self.tts.runAndWait()
 
         '''
         Test each pixel of the image for divergence or inclusion in the
@@ -199,10 +205,12 @@ class Fractal:
                                                ci=self.CENTER[1],
                                                p=p_complete))
 
-                    self.tts.say(self.P_STRING.format(cr=self.CENTER[0],
-                                                        ci=self.CENTER[1],
-                                                        p=p_complete))
-                    self.tts.runAndWait()
+                    if self.SPEAK:
+
+                        self.tts.say(self.P_STRING.format(cr=self.CENTER[0],
+                                                            ci=self.CENTER[1],
+                                                            p=p_complete))
+                        self.tts.runAndWait()
 
         # Finally, write the image.
         IMAGE_F = 'mandelbrot center=' + str(self.CENTER[0]) + '+' + \
