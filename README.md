@@ -13,21 +13,23 @@ This requires a few packages.
 * pyttsx3
 
 # run the script
-_Resolution_ is the, well, the resolution of the image. These only take even numbers for the resolution to facilitate a division by 2 in the code.
+`resolution` is the, well, the resolution of the image. These only take even numbers for the resolution to facilitate a division by 2 in the code.
 
-_Colors_ is a Python dictionary that sets `'m'` as the color of the Mandelbrot set and `'d'` as the color of coordinates that diverge from the Mandelbrot set.
+`colors` is a Python dictionary that sets `'m'` as the color of the Mandelbrot set and `'d'` as the color of coordinates that diverge from the Mandelbrot set.
 
-_Center_ is what coordinate of the complex plane is the center pixel of the image as a tuple. If the center pixel of the image is -0.66 + 0i, the _center_ is (-0.66, 0).
+`center` is what coordinate of the complex plane is the center pixel of the image as a tuple. If the center pixel of the image is -0.66 + 0i, the `center` is (-0.66, 0).
 
-_Top_ is what imaginary coordinate of the complex plane is the top row of pixels of the image. If very top of the image is 1.6i in the complex plane, _top_ is 1.6.
+`top` is what imaginary coordinate of the complex plane is the top row of pixels of the image. If very top of the image is 1.6i in the complex plane, `top` is 1.6.
 
-_Magnification_ defines how many subpixels a pixel is divided into. I tended towards factors of 255 since their purpose is to effect the brightness of the color of a pixel. This has a great impact on how much time the render takes. To set magnification to 1 means no subpixels are calculated.
+`magnification` defines how many subpixels a pixel is divided into. I tended towards factors of 255 since their purpose is to effect the brightness of the color of a pixel. This has a great impact on how much time the render takes. To set magnification to 1 means no subpixels are calculated.
 
-_Divergence_ _iterations_ define how many iterations of the Mandelbrot equation a coordinate is put through until the code says whether it diverges or is a part of the Mandelbrot set. This also has a great impact on how much time a render takes. More iterations of course mean more time.
+`divergence_iterations` define how many iterations of the Mandelbrot equation a coordinate is put through until the code says whether it diverges or is a part of the Mandelbrot set. This also has a great impact on how much time a render takes. More iterations of course mean more time.
 
-A _magnification_ of 1 and _divergence_ _iterations_ of 20 makes render time fast but less accurate. A _magnification_ of 17 subpixels and _divergence_ _iterations_ of 1600 or 4000 makes for a better image, but the render time takes many hours. A good thing to do is to render a 50×50 or 100×100 pixel image first for a test.
+A `magnification` of 1 and `divergence_iterations` of 20 makes render time fast but less accurate. A `magnification` of 17 subpixels and `divergence_iterations` of 1600 or 4000 makes for a better image, but the render time takes many hours. A good thing to do is to render a 50×50 or 100×100 pixel image first for a test.
 
-To toggle speech off, set _speak_ to `False`.
+To toggle speech off, set `speak` to `False`.
+
+If you're running the program in a loop to make animation stills, you may pass the frame number as `image_number` to the program for numbered file names.
 
 An image subdirectory is created in the same folder as the script for the images. To run the code.
 
