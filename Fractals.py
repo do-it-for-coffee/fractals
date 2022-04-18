@@ -39,7 +39,8 @@ class Fractal:
         self.tts = pyttsx3.init()
 
     def mandelbrot(self, image_size, colors, center=None, top=1.6,
-                   magnification=1, divergence_iterations=1600, speak=True):
+                   magnification=1, divergence_iterations=1600, speak=True,
+                   image_number=None):
 
         # Speech toggle.
         self.SPEAK = speak
@@ -217,6 +218,8 @@ class Fractal:
                   str(self.CENTER[1]) + 'i, top=' + str(self.TOP) + 'i, ' + \
                   str(self.IMAGE_SIZE[0]) + '×' + str(self.IMAGE_SIZE[1]) + \
                   '.png'
+        if image_number is not None:
+            IMAGE_F = "%04d" % image_number + ' ' + IMAGE_F
         IMAGE_PATH = os.path.join(self.IMAGE_DIR, IMAGE_F)
 
         self.write_image(image_array, IMAGE_PATH)
